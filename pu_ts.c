@@ -13,11 +13,11 @@ int pu_ts(char *s)
 	int x = 0, count = 0;
 
 	if (s == NULL)
-		return (-1);
+		return (0);
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		put_char(s[x]);
-		count += 1;
+		count++;
 	}
 	return (count);
 }
