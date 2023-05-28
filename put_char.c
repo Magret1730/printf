@@ -2,7 +2,7 @@
 
 /**
  * put_char - prints character
- * @c: argument to accept
+ * @o: argument to accept
  *
  * Description: A function that prints character
  * Emulating the putchar standard library function
