@@ -19,25 +19,30 @@ int _printf(const char *format, ...)
 	for (x = 0; format[x] != '\0'; x++)
 	{
 		if (format[x] != '%')
+		{
 			put_char(format[x]);
-		count += 1;
-		if (format[x] == '%')
+			count ++;
+		}
+		else if (format[x] == '%')
 		{
 			if (format[x + 1] == 'c')
 			{
 				put_char(va_arg(vary, int));
 				x++;
+				count++;
 			}
 			else if (format[x + 1] == 's')
 			{
-				pu_ts(va_arg(vary, char *));
+				count += pu_ts(va_arg(vary, char *));
 				x++;
 			}
 			else if (format[x + 1] == '%')
 			{
 				put_char('%');
+				x++;
+				count++;
+
 			}
-			count += 1;
 		}
 	}
 	va_end(vary);
