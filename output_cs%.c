@@ -14,8 +14,11 @@ int _printf(const char *format, ...)
 	va_list vary;
 
 	va_start(vary, format);
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		va_end(vary);
 		return (-1);
+	}
 	for (x = 0; format[x] != '\0'; x++)
 	{
 		if (format[x] != '%')
