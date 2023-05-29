@@ -16,8 +16,7 @@ int pu_ts(char *s)
 		return (0);
 	for (x = 0; s[x] != '\0'; x++)
 	{
-		put_char(s[x]);
-		count++;
+		count += put_char(s[x]);
 	}
 	return (count);
 }
