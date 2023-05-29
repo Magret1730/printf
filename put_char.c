@@ -9,7 +9,7 @@
  * Return: integer
  */
 
-int put_char(char o)
+ssize_t put_char(char o)
 {
 	return (write(1, &o, 1));
 }
