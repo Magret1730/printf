@@ -20,16 +20,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[x] != '%')
 		{
-			put_char(format[x]);
-			count++;
+			count += put_char(format[x]);
 		}
 		else if (format[x] == '%')
 		{
 			if (format[x + 1] == 'c')
 			{
-				put_char(va_arg(vary, int));
+				count += put_char(va_arg(vary, int));
 				x++;
-				count++;
 			}
 			else if (format[x + 1] == 's')
 			{
@@ -38,9 +36,8 @@ int _printf(const char *format, ...)
 			}
 			else if (format[x + 1] == '%')
 			{
-				put_char('%');
+				count += put_char('%');
 				x++;
-				count++;
 
 			}
 		}
