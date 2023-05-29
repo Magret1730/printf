@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int put_char(char c);
+ssize_t put_char(char o);
 int pu_ts(char *s);
 
 
