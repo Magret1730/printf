@@ -20,6 +20,7 @@ typedef struct p_handlers
 	int (*p_func)(va_list);
 } p_handler;
 
+
 int _printf(const char *format, ...);
 int p_char(va_list argu);
 int p_str(va_list argu);
