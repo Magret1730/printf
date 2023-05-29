@@ -22,7 +22,7 @@ typedef struct p_handlers
 
 
 int _printf(const char *format, ...);
-int p_char(va_list argu);
-int p_str(va_list argu);
+int put_char(char o);
+int pu_ts(char *);
 
 #endif
