@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list argu;
 	int count = 0;
 	size_t i;
-	p_handler hand[] = {{"c", p_char}, {"s", p_str}};
+	p_handler hand[] ={{"c", p_char}, {"s", p_str}};
 
 	va_start(argu, format);
 	if (format == NULL)
