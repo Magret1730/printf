@@ -5,9 +5,23 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/**
+ * struct p_handlers- handles the specifiers
+ * @spec: specifier string
+ * @p_func: function pointer to the corresponding print function
+ *
+ * Description: This struct associates format specifiers with their
+ *              respective print functions.
+ */
+
+typedef struct p_handlers
+{
+	char *spec;
+	int (*p_func)(va_list);
+} p_handler;
+
 int _printf(const char *format, ...);
-int put_char(char c);
-int pu_ts(char *s);
-void print_int(int num);
+int p_char(va_list argu);
+int p_str(va_list argu);
 
 #endif
