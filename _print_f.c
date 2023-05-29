@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			if (i == sizeof(hand) / sizeof(hand[0]))
 			{
 				write(1, "%", 1);
-				count ++;
+				count++;
 			}
 		}
 		format++;
