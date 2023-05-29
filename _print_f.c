@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
  * _printf - prints according to a format
  * @format: argument count
  * Description: function that prints according to a format
  * Return: count
  */
-
 int _printf(const char *format, ...)
 {
 	va_list argu;
@@ -30,6 +28,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
+			if (*format == '\0')
+				return (-1);
 			for (i = 0; i < sizeof(hand) / sizeof(hand[0]); i++)
 			{
 				if (*format == *hand[i].spec)
