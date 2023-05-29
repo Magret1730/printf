@@ -2,14 +2,11 @@
 
 /**
  * put_char - prints character
- * @o: argument to accept
- *
- * Description: A function that prints character
- * Emulating the putchar standard library function
- * Return: integer
+ * @c: character to print
+ * Return: On success, return the number of characters printed.
+ *         On error, -1 is returned.
  */
-
-ssize_t put_char(char o)
+int put_char(char c)
 {
-	return (write(1, &o, 1));
+	return (write(1, &c, 1));
 }
