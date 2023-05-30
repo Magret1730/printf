@@ -1,12 +1,13 @@
 #include "main.h"
 /**
  * pu_ts - prints string
- * @s: string to print
+ * @arg: argument to print
+ * @count: argument to print
  * Return: Number of characters printed.
  */
-int pu_ts(char *s)
+int pu_ts(va_list args, int count)
 {
-	int count = 0;
+	char *s = va_arg(args, char *);
 
 	if (s == NULL)
 		s = "(null)";
