@@ -37,7 +37,8 @@ int _printf(const char *format, ...)
 				s = va_arg(args, char *);
 				count += pu_ts(s);
 			}
-			else if (*format == '%'){
+			else if (*format == '%')
+			{
 				put_char('%');
 				count++;
 			}
