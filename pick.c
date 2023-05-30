@@ -23,6 +23,10 @@ int pick(const char *format, va_list args, int count)
 			put_char('%');
 			count++;
 			break;
+		case 'i':
+		case 'd':
+			count = print_int(args, count);
+			break;
 		default:
 			return (-1);
 	}
