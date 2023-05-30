@@ -13,7 +13,6 @@ int pick(const char *format, va_list args, int count)
 	switch (*format)
 	{
 		case 'c':
-			/*pu_ts(args, count);*/
 			put_char(va_arg(args, int));
 			count++;
 			break;
@@ -22,10 +21,10 @@ int pick(const char *format, va_list args, int count)
 			break;
 		case '%':
 			put_char('%');
-                        count++;
-                        break;
-		default:
+			count++;
 			break;
+		default:
+			return (-1);
 	}
 	return (count);
 }

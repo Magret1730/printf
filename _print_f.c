@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int count = 0;
 
 	va_start(args, format);
-	 if (format == NULL)
+	if (format == NULL)
 	{
 		va_end(args);
 		return (-1);
@@ -22,7 +22,17 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			if (*format == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
 			count += pick(format, args, count);
+			if (count == -1)
+			{
+				va_end(args);
+				return (-1);
+			}
 			format++;
 		}
 		else
