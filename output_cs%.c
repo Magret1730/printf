@@ -35,12 +35,17 @@ int _printf(const char *format, ...)
 			else if (*format == 's')
 			{
 				s = va_arg(args, char *);
-				count += pu_ts(s);
+				count += (s == NULL ? pu_ts("(null)") : pu_ts(s));
 			}
 			else if (*format == '%')
 			{
 				put_char('%');
 				count++;
+			}
+			else
+			{
+				va_end(args);
+				return (-1);
 			}
 		}
 		format++;
