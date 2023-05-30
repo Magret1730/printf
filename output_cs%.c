@@ -2,7 +2,6 @@
 /**
  * _printf - the function that produces output according to a format
  * @format:  is a character string
- * Description: function that produces output according to a format
  * Return: returns count
  */
 int _printf(const char *format, ...)
@@ -13,7 +12,6 @@ int _printf(const char *format, ...)
 	va_start(vary, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-		va_end(vary);
 		return (-1);
 	}
 	else if (format[0] == '%' && format[1] == '%' && format[2] == '\0')
