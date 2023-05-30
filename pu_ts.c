@@ -11,9 +11,10 @@ int pu_ts(char *s)
 	if (s == NULL)
 		s = "(null)";
 
-	while (*s)
+	while (*s != '\0')
 	{
-		put_char(*s);
+		if (put_char(*s) == -1)
+			return (-1);
 		count++;
 		s++;
 	}
