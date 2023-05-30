@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * pu_ts - prints string
- * @arg: argument to print
+ * @args: argument to print
  * @count: argument to print
  * Return: Number of characters printed.
  */
