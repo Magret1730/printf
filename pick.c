@@ -27,6 +27,9 @@ int pick(const char *format, va_list args, int count)
 		case 'd':
 			count = print_int(args, count);
 			break;
+		case 'b':
+			count = print_bin(va_arg(args, unsigned int), count);
+			break;
 		default:
 			return (-1);
 	}
