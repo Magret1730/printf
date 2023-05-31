@@ -6,10 +6,11 @@
  * @count: argument to print
  * Return: Number of characters printed.
  */
-int print_int(va_list args, int count)
+int print_int(va_list args)
 {
 	int i, d, digits, div = 1;
 	int n = va_arg(args, int);
+	int count = 0;
 
 	digits = help_print_int(n);
 
