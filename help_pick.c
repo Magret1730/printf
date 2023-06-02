@@ -15,6 +15,9 @@ int help_pick(const char *format, va_list args, int count)
 			case 'S':
 				count += specifier_hexa(args);
 				break;
+			case 'p':
+				count += specifier_p(format, args);
+				break;
 			default:
 				return (-1);
 		}
