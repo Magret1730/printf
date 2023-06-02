@@ -17,5 +17,7 @@ int print_u(unsigned int n);
 int octa(va_list args);
 int _hexa(va_list args);
 int recurs_hexa(unsigned int n);
+int specifier_hexa(va_list args);
+int help_pick(const char *format, va_list args, int count);
 
 #endif
